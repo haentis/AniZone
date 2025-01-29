@@ -6,16 +6,26 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
-nav{
-    display: flex;
-    flex-direction: row;
-    gap: 10%;
-}
-
-
-.nav-link{
-    text-decoration: none;
+.search-input{
+    width: 93%;
+    height: 50px;
+    background-color: rgb(29, 29, 29);
+    border: 0px;
+    border-radius: 30px;
+    padding-left: 70px;
     color: white;
+    font-size: 17px;
+}
+
+.search-input:focus{
+    border: 0px;
+}
+
+
+.search-icon{
+    position: absolute;
+    left: 50px;
 }

@@ -1,16 +1,13 @@
-import './header.css'
-import {Link} from 'react-router-dom';
+import './header.css';
+import searchIcon from '../../assets/icons/searchIcon.png';
+// import {Link} from 'react-router-dom';
 
 function Header(){
     return(
         <>
             <header>
-                <nav>
-                    <Link to={'/'} className='nav-link'>Главная</Link>
-                    <Link to={'/Аниме'} className='nav-link'>Аниме</Link>
-                    <Link to={'/Поиск'} className='nav-link'>Поиск</Link>
-                    <Link to={'/Библеотека'} className='nav-link'>Библеотека</Link>
-                </nav>
+                <img src={searchIcon} alt="searchIcon" width={"30px"} height={"30px"} className='search-icon'/>
+                <input type="text" className='search-input' placeholder='Search....'/>
             </header>
         </>
     )
