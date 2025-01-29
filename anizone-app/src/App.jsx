@@ -1,10 +1,16 @@
+import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Search from "./pages/Search";
 
 function App() {
   return (
-    <>
-      <p>III</p>
-    </>
+      <BrowserRouter>
+       <Routes>
+         <Route path="/" element={<Home/>}/>
+         <Route path="/Поиск" element={<Search/>}/>
+       </Routes>
+      </BrowserRouter>
   )
 }
 
-export default App
+export default App;
