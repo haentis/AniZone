@@ -27,5 +27,9 @@ header{
 
 .search-icon{
     position: absolute;
-    left: 50px;
+    left: 3%;
+}
+
+@media screen {
+    
 }

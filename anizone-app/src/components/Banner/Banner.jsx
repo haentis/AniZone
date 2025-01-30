@@ -1,57 +1,59 @@
 import { useState, useEffect } from "react";
 import './banner.css';
 import playIcon from '../../assets/icons/playIcon.png';
+import { BANNER_TITLES } from "../../data/banner";
 
 
+// const BASE_URL = 'https://shikimori.one/api/animes/';
 
-const BASE_URL = 'https://api.jikan.moe/v4/top/anime';
+console.log()
 
-
-const randomIndexTrailer = Math.floor(Math.random() * 25);
+const randomIndexTrailer = Math.floor(Math.random() * 4);
 
 function Banner(){
 
-    const [trailer, SetTrailer] = useState(null);
+    // const [trailer, SetTrailer] = useState(null);
 
 
-    useEffect(() => {
-        const fetchTrailer = async() => {
-            try{
-                const response  = await fetch(`${BASE_URL}`);
-                const postTrailer = await response.json();
-                SetTrailer(postTrailer);
-                // console.log(postTrailer)
-            }catch(Error){
-                console.log('Ошибка при загрузке данных',Error)
-            }
+    // useEffect(() => {
+    //     const fetchTrailer = async() => {
+    //         try{
+    //             const response  = await fetch(`${BASE_URL}${randomIndexTrailer}`);
+    //             const postTrailer = await response.json();
+    //             SetTrailer(postTrailer);
+    //             console.log(postTrailer)
+    //         }catch(Error){
+    //             console.log('Ошибка при загрузке данных',Error)
+    //         }
            
-        } 
-        fetchTrailer()
-    },[])
+    //     } 
+    //     fetchTrailer()
+    // },[])
 
 
     return(
         <>
-           {trailer && trailer.data && trailer.data[randomIndexTrailer]?.trailer?.images.maximum_image_url ? ( // Проверяем наличие данных
+           {/* {trailer && trailer.image && trailer.image.original?( // Проверяем наличие данных */}
             <div className="banner">
                 <img 
-                src={trailer.data[randomIndexTrailer]?.trailer?.images.maximum_image_url}
+                // src={`https://shikimori.one${trailer.image.original}`}
+                src={BANNER_TITLES[randomIndexTrailer].image}
                 alt="bannerImage"
                 width={'100%'}
                 height={'800px'}
                 style={{opacity:"50%"}}
                 />
                 <div className="block-title-button">
-                    <h1>{trailer.data[randomIndexTrailer]?.title_english}</h1>
-                    <button className="watch-button">
+                    <h1>{BANNER_TITLES[randomIndexTrailer].title}</h1>
+                    {/* <button className="watch-button">
                         <img src={playIcon} alt="" width={"20px"} height={"20px"} />
                         Watch now
-                    </button>
+                    </button> */}
                 </div>
             </div>
-            ) : (
+            {/* ) : (
                 <p>Loading...</p>
-            )}
+            )} */}
         </>
     )
 }

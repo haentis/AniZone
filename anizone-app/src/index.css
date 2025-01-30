@@ -1,4 +1,10 @@
-body{
-  margin: 0px;
+@font-face {
+  font-family:Arimo-VariableFont;
+  src: url('/font/Arimo-VariableFont.ttf');
+}
+
+body {
+  margin: 0;
   background-color: black;
+  font-family:Arimo-VariableFont;
 }
