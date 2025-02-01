@@ -8,11 +8,11 @@ function Nav(){
             <nav>
                 <Link to={'/'} className='link-nav'>
                 <img src={homeIcon} alt="homeIcon" width={"20px"} height={"20px"} />
-                Home
+                 Главная
                 </Link>
                 <Link to={'/Saves'} className='link-nav'>
                 <img src={favoriteIcon} alt="favoriteIcon" width={"20px"} height={"20px"} />
-                Saves
+                    Библеотека
                 </Link>
             </nav>
         </>
