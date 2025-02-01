@@ -1,7 +1,8 @@
-import jujutsu from '../assets/images/jujutsu.avif';
+import jujutsu from '../assets/images/jujutsu.webp';
 import sakamoto from '../assets/images/sakamoto.jpg';
-import bleach from '../assets/images/bleach.jpeg';
-import tokyoghoul from '../assets/images/tokyoghoul.jpg';
+import bleach from '../assets/images/bleach3.jpg';
+import tokyoghoul from '../assets/images/kaneki.jpg';
+import sakamotoVideo from '../assets/video/sakamoto.mp4';
 
 
 export const BANNER_TITLES = [
@@ -14,6 +15,7 @@ export const BANNER_TITLES = [
         id:2,
         title: 'Дни Сакамото',
         image: sakamoto,
+        video: sakamotoVideo,
     },
     {
         id:3,

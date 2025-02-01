@@ -33,27 +33,16 @@ function Banner(){
 
     return(
         <>
-           {/* {trailer && trailer.image && trailer.image.original?( // Проверяем наличие данных */}
             <div className="banner">
                 <img 
-                // src={`https://shikimori.one${trailer.image.original}`}
-                src={BANNER_TITLES[randomIndexTrailer].image}
-                alt="bannerImage"
-                width={'100%'}
-                height={'800px'}
-                style={{opacity:"50%"}}
+                    src={BANNER_TITLES[randomIndexTrailer].image}
+                    alt="bannerImage"
+                    width={'100%'}
+                    height={'800px'}
+                    style={{opacity:"50%"}}
+                    className="bannerImage"
                 />
-                <div className="block-title-button">
-                    <h1>{BANNER_TITLES[randomIndexTrailer].title}</h1>
-                    {/* <button className="watch-button">
-                        <img src={playIcon} alt="" width={"20px"} height={"20px"} />
-                        Watch now
-                    </button> */}
-                </div>
             </div>
-            {/* ) : (
-                <p>Loading...</p>
-            )} */}
         </>
     )
 }
