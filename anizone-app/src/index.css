@@ -1,16 +1,16 @@
 @font-face {
-  font-family:Arimo-VariableFont;
-  src: url('./public/font/Arimo-VariableFont.ttf');
+  font-family:RussoOne;
+  src: url('/font/PTSans-Bold.woff');
 }
 
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%; /* Это важно, чтобы высота работала */
+  height: 100%;
   margin: 0;
   background-color: black;
-  font-family:Arimo-VariableFont;
+  font-family:RussoOne;
 }
 
 

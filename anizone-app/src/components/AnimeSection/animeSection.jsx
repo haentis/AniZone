@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import './animeSection.css';
+import { Link } from 'react-router-dom';
 
-const  BASE_URL = 'https://shikimori.one/api/animes?order=popularity&limit=30';
+const  BASE_URL = 'https://shikimori.one/api/animes?order=popularity&limit=50';
 
 function AnimeSection(){
 
@@ -33,14 +34,16 @@ function AnimeSection(){
             <div className="main">
                 {animeResult.length > 0 ?(
                      animeResult.map((anime, index) => (
-                        <div key={index} className="anime-card">
-                          <img src={`https://shikimori.one${anime.image.original}`} className='anime-image' />
-                          <h3 className='anime-title'>{anime.russian || anime.name}</h3>
-                          <p className='anime-score'>Рейтинг: {anime.score}</p>
-                        </div>
+                        <Link to={`/Аниме/${anime.id}`} style={{textDecoration:"none"}} key={index}>
+                            <div key={index} className="anime-card">
+                            <img src={`https://shikimori.one${anime.image.original}`} className='anime-image' />
+                            <h3 className='anime-title'>{anime.russian || anime.name}</h3>
+                            <p className='anime-score'>Рейтинг: {anime.score}</p>
+                            </div>
+                        </Link>
                   ))) : (
                     // <p className='loading-p'>Загрузка....</p>
-                    <div className="loader"></div>
+                    <div className="loader1"></div>
                   )}
             </div>
         </>

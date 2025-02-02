@@ -10,7 +10,7 @@ function Nav(){
                 <img src={homeIcon} alt="homeIcon" width={"20px"} height={"20px"} />
                  Главная
                 </Link>
-                <Link to={'/Saves'} className='link-nav'>
+                <Link to={'/Библеотека'} className='link-nav'>
                 <img src={favoriteIcon} alt="favoriteIcon" width={"20px"} height={"20px"} />
                     Библеотека
                 </Link>
