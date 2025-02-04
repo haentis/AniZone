@@ -9,7 +9,7 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
-  background-color: black;
+  background: linear-gradient(135deg, #1b1b1b, #1a1a1a);
   font-family:RussoOne;
 }
 
